@@ -1,0 +1,22 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadNetworkAndStorage",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeAddresses",
+        "ec2:DescribeVolumes",
+        "ec2:DescribeNatGateways",
+        "cloudwatch:GetMetricStatistics"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "PublishReport",
+      "Effect": "Allow",
+      "Action": "sns:Publish",
+      "Resource": "PASTE-YOUR-TOPIC-ARN-HERE"
+    }
+  ]
+}
